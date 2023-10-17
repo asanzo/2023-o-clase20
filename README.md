@@ -13,5 +13,6 @@ Existen por ahora 2 medios de pago (pueden haber más):
 - Tarjeta de débito: al pagar con débito, se resta del dinero disponible el valor de la compra.
 
 1. Hacer que la porota venda una cantidad de gramos de porotos a un cliente. Al hacerlo, debe disminuir el stock y el cliente pagar lo correspondiente.
-2. Agregar los cupones, que son un medio de pago de un solo uso y con un máximo. No pueden usarse 2 veces, ni el monto de la venta puede superar su máximo.
+2. Tests de una venta (pensar las clases de equivalencia). 
+4. Agregar los cupones, que son un medio de pago de un solo uso y con un máximo. No pueden usarse 2 veces, ni el monto de la venta puede superar su máximo.
 
