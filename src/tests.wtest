@@ -1,6 +1,29 @@
+import example.*
 
-test "testX" {
 
-	assert.that(true)
 
+
+describe "tests vender" {
+	var pablo = new Cliente()
+	
+	test "al vender la porota descuenta el stock correspondiente" {		
+		laPorota.vender(10, pablo)
+		assert.equals(990, laPorota.gramosStock())
+	
+	}
+	
+	test "al vender la porota hace que el cliente pague" {
+		laPorota.vender(10, pablo)
+		assert.equals(50, pablo.medioDePago().deuda())
+	
+	}	
+	
+	test "al vender si hay problemas con el medio no debe descontar stock" {
+		pablo.medioDePago(new TarjetaDebito())
+		assert.throwsExceptionLike(
+			new DomainException(message="No hay saldo"),
+				{laPorota.vender(30, pablo)} )
+				
+		assert.equals(1000, laPorota.gramosStock())
+	}
 }
