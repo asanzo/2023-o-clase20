@@ -1,6 +1,3 @@
-# 2023-o-clase20
-Repo para clase 20, de excepciones.
-
 
 ### Enunciado
 
